@@ -51,7 +51,7 @@
     <default>
         <couponextra>
             <general>
-                <active>1</active>
+                <active>0</active>
                 <recursive>0</recursive>
                 <purchasenumber>1</purchasenumber>
             </general>
