@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Devopensource_CouponExtra>
+            <version>0.0.1</version>
+        </Devopensource_CouponExtra>
+    </modules>
+    <global>
+        <helpers>
+            <couponextra>
+                <class>Devopensource_CouponExtra_Helper</class>
+            </couponextra>
+        </helpers>
+        <models>
+            <couponextra>
+                <class>Devopensource_CouponExtra_Model</class>
+            </couponextra>
+        </models>
+        <events>
+            <sales_order_place_after>
+                <observers>
+                    <generate_coupon>
+                        <type>singleton</type>
+                        <class>couponextra/observer</class>
+                        <method>generateCoupon</method>
+                    </generate_coupon>
+                </observers>
+            </sales_order_place_after>
+        </events>
+        <template>
+            <email>
+                <coupon_extra  module="couponextra">
+                    <label>Coupon Extra Email</label>
+                    <file>coupon_extra.html</file>
+                    <type>html</type>
+                </coupon_extra>
+            </email>
+        </template>
+    </global>
+    <frontend>
+        <translate>
+            <modules>
+                <Devopensource_CouponExtra>
+                    <files>
+                        <default>Devopensource_CouponExtra.csv</default>
+                    </files>
+                </Devopensource_CouponExtra>
+            </modules>
+        </translate>
+    </frontend>
+    <default>
+        <couponextra>
+            <general>
+                <active>1</active>
+                <recursive>0</recursive>
+                <purchasenumber>1</purchasenumber>
+            </general>
+            <coupon>
+                <name>First purchase</name>
+                <description>5% discount coupon for your first purchase</description>
+                <expiration>0</expiration>
+                <group>1</group>
+                <typeofdiscount>by_percent</typeofdiscount>
+                <discount>5</discount>
+            </coupon>
+        </couponextra>
+    </default>
+</config>
