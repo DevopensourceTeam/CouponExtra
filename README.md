@@ -29,4 +29,4 @@ Magento Module Devopensource_CouponExtra
 
 ### Changelog
 
-Realizar Traducción mail al español
+* Realizar Traducción mail al español
