@@ -32,10 +32,10 @@ class Devopensource_CouponExtra_Model_Observer {
                 $group              =   Mage::getStoreConfig('couponextra/coupon/group');
                 $typeofdiscount     =   Mage::getStoreConfig('couponextra/coupon/typeofdiscount');
                 $discount           =   Mage::getStoreConfig('couponextra/coupon/discount');
-                $from               =   date('Y-m-d');
+                $from               =   Mage::getModel('core/date')->date('Y-m-d');
 
                 if($expiration>0){
-                    $to             =   date('Y-m-d', strtotime("$from +$expiration days"));;
+                    $to             =   Mage::getModel('core/date')->date('Y-m-d', strtotime("$from +$expiration days"));
                 }else{
                     $to="";
                 }
@@ -64,8 +64,7 @@ class Devopensource_CouponExtra_Model_Observer {
                         ->save();
 
                     // create coupon
-                    $coupon->setId(null)
-                        ->setRuleId($rule->getRuleId())
+                    $coupon->setRuleId($rule->getRuleId())
                         ->setCode($code)
                         ->setUsageLimit(1)
                         ->setIsPrimary(1)
