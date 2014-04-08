@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <tabs>
+        <devopsall translate="label">
+            <label>Devopensource</label>
+            <sort_order>100000</sort_order>
+        </devopsall>
+    </tabs>
+</config>

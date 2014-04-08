@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Devopensource_All>
+            <version>0.1.0</version>
+        </Devopensource_All>
+    </modules>
+    <global>
+        <helpers>
+            <devopsall>
+                <class>Devopensource_All_Helper</class>
+            </devopsall>
+        </helpers>
+    </global>
+</config>
