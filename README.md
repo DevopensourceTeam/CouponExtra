@@ -19,7 +19,7 @@ Magento Module Devopensource_CouponExtra
 ### Cómo instalarlo
 
 * modgit init .
-* modgit clone [git@github.com:DevopensourceTeam/TaxVatNumber.git](git@github.com:DevopensourceTeam/CouponExtra)
+* modgit clone [git@github.com:DevopensourceTeam/CouponExtra.git](git@github.com:DevopensourceTeam/CouponExtra)
 
 
 ### Cómo Configurarlo
