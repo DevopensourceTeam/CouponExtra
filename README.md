@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/DevopensourceTeam/CouponExtra.png?label=ready&title=Ready)](https://waffle.io/DevopensourceTeam/CouponExtra)
 CouponExtra
 ===========
 
